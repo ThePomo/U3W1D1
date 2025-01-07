@@ -1,4 +1,6 @@
 import { Component } from 'react'
+import PropTypes from 'prop-types';
+
 
 class ImageComponent extends Component {
   render() {
@@ -8,5 +10,10 @@ class ImageComponent extends Component {
 
   }
 }
+
+ImageComponent.propTypes = {
+    src: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+  };
 
 export default ImageComponent;
