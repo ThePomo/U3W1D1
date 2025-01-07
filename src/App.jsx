@@ -1,10 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import ButtonComponent from "./components/ButtonComponent";
+import ImageComponent from "./components/ImageComponent";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -21,6 +23,19 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        <ButtonComponent text="Click Me!" />
+        <ButtonComponent text="Ciao" />
+        <ButtonComponent text="Sono Giuseppe" />
+        <ButtonComponent text="💩" />
+        <div>
+          <ImageComponent
+            src="https://upload.wikimedia.org/wikipedia/commons/1/18/React_Native_Logo.png"
+            alt="Logo"
+          />
+        </div>
+        <div>
+          <ImageComponent src="public/reactIcon.png" alt="Logo" />
+        </div>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
@@ -29,7 +44,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
